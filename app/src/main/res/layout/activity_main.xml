@@ -9,7 +9,7 @@
     tools:context="vn.manroid.calculator.MainActivity">
 
     <TextView
-        android:text="Welcome to Công ty cổ phần DevPro Việt Nam || Adress :Tầng 6, số 147 Phố Mai Dịch,Cầu Giấy TP Hà Nội "
+        android:text="Welcome to Công ty cổ phần DevPro Việt Nam || Adress :Tầng 6, số 147 Phố Mai Dịch,Cầu Giấy TP Hà Nội || Hotline: 0985 95 08 95 (miss Hằng) "
         android:id="@+id/MarqueeText"
         android:background="#000"
         android:textColor="#0bfb07"
@@ -71,7 +71,7 @@
             style="@style/MyConculator" />
 
         <Button
-            android:text="%"
+            android:text="SQRT"
             android:background="@drawable/selector_button_4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
