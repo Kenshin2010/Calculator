@@ -7,14 +7,19 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    TextView txtResult;
-    Button btnClear;
+    //show text
     TextView txtShow;
+
+    //=========================================//
+
+    //For Caculator
+
+    private TextView txtResult;
+    private Button btnClear;
+
     private String trai = "";
     private String phai = "";
     private String phepToan = "";
-
     private boolean chuyen = false;
 
 
@@ -22,55 +27,77 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txtShow = (TextView)findViewById(R.id.MarqueeText);
+        //show text
+        txtShow = (TextView) findViewById(R.id.MarqueeText);
         txtShow.setSelected(true);
-        txtResult = (TextView) findViewById(R.id.txtResult);
+
+        //=================================================//
+
         btnClear = (Button) findViewById(R.id.btnClear);
+        txtResult = (TextView) findViewById(R.id.txtResult);
         btnClear.setOnClickListener(this);
+
     }
 
+    @Override
+    public void onClick(View v) {
+        trai = "";
+        phai = "";
+        txtResult.setText("");
+        chuyen = false;
+    }
+
+
     public void onActionClick(View view) {
+
         String tag = view.getTag().toString();
         switch (tag) {
             case "1":
             case "2":
             case "3":
             case "4":
+            case "6":
                 chuyen = true;
                 phepToan = view.getTag().toString();
                 break;
             default:
                 thucHienPhepBang();
-                break;
         }
+
+
     }
+
 
     private void thucHienPhepBang() {
         Double kqua = null;
         double _trai = Double.parseDouble(trai);
         double _phai = Double.parseDouble(phai);
 
-        switch (phepToan){
-            case "1" :
+        switch (phepToan) {
+            case "1":
                 kqua = _trai + _phai;
                 break;
-            case "2" :
+            case "2":
                 kqua = _trai - _phai;
                 break;
-            case "3" :
+            case "3":
                 kqua = _trai * _phai;
                 break;
-            case "4" :
+            case "4":
                 kqua = _trai / _phai;
                 break;
+            case "6":
+                kqua = Math.exp(1.0/_phai*Math.log(_trai));
+                    break;
+            default:
+                txtResult.setText("Nhập phép tính");
         }
-        if (kqua != null){
+        if (phepToan != null) {
             txtResult.setText(String.valueOf(kqua));
             trai = String.valueOf(kqua);
             phai = "";
             chuyen = false;
-
-        }else {
+        } else {
             txtResult.setText("Error");
         }
 
@@ -88,17 +115,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             txtResult.setText(phai);
         }
 
-
-    }
-
-
-    //Click for Clear
-    @Override
-    public void onClick(View v) {
-
-        trai = "";
-        phai = "";
-        chuyen = false;
-        txtResult.setText("");
     }
 }

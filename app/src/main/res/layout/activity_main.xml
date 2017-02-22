@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:orientation="vertical"
+    android:background="#000"
     android:weightSum="6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -63,17 +64,21 @@
 
         <Button
             android:text="+/-"
+            android:onClick="onActionClick"
             android:background="@drawable/selector_button_4"
             android:layout_width="wrap_content"
+            android:tag="7"
             android:layout_height="match_parent"
             android:id="@+id/button3"
             android:layout_weight="1"
             style="@style/MyConculator" />
 
         <Button
-            android:text="SQRT"
+            android:text="Căn"
+            android:onClick="onActionClick"
             android:background="@drawable/selector_button_4"
             android:layout_width="wrap_content"
+            android:tag="6"
             android:layout_height="match_parent"
             android:id="@+id/button2"
             android:layout_weight="1"
@@ -128,7 +133,7 @@
             style="@style/MyConculator" />
 
         <Button
-            android:text="X"
+            android:text="x"
             android:onClick="onActionClick"
             android:tag="3"
             android:background="@drawable/selector_button_5"
