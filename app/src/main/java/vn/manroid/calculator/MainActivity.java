@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(this, "Manroid38 - K17", Toast.LENGTH_LONG).show();
         //show text
         txtShow = (TextView) findViewById(R.id.MarqueeText);
         txtShow.setSelected(true);

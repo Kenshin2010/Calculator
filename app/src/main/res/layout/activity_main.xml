@@ -2,278 +2,277 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:orientation="vertical"
-    android:background="#000"
-    android:weightSum="6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    android:weightSum="6"
     tools:context="vn.manroid.calculator.MainActivity">
 
     <TextView
-        android:text="Welcome to Công ty cổ phần DevPro Việt Nam || Adress :Tầng 6, số 147 Phố Mai Dịch,Cầu Giấy TP Hà Nội || Hotline: 0985 95 08 95 (miss Hằng) "
         android:id="@+id/MarqueeText"
-        android:background="#000"
-        android:textColor="#0bfb07"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
+        android:background="#000"
         android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:paddingLeft="15dip"
-        android:paddingRight="15dip"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:freezesText="true">
+        android:freezesText="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="App created by Manroid38 - Student at Trường Đại Học Công Nghiệp Hà Nội - Devpro - K17 "
+        android:textColor="#0bfb07">
 
     </TextView>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/txtResult"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="#000"
-            android:textColor="#fdfcfc"
-            android:gravity="right|center_vertical"
-            android:textSize="32sp"
             android:ems="10"
-            android:id="@+id/txtResult"
-            android:layout_weight="1"
-            />
+            android:gravity="right|center_vertical"
+            android:textColor="#fdfcfc"
+            android:textSize="32sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
-            android:text="C"
-            android:background="@drawable/selector_button_4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            style="@style/MyConculator"
             android:id="@+id/btnClear"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="-"
-            android:background="@drawable/selector_button_4"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:text="C" />
+
+        <Button
             android:id="@+id/btn_dau"
+            style="@style/MyConculator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="Căn"
-            android:onClick="onActionClick"
             android:background="@drawable/selector_button_4"
-            android:layout_width="wrap_content"
-            android:tag="6"
-            android:layout_height="match_parent"
-            android:id="@+id/button2"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
+            android:text="-" />
 
         <Button
-            android:text="/"
-            android:onClick="onActionClick"
-            android:background="@drawable/selector_button_5"
-            android:tag="4"
+            android:id="@+id/button2"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/button"
             android:layout_weight="1"
-            style="@style/MyConculator2" />
+            android:background="@drawable/selector_button_4"
+            android:onClick="onActionClick"
+            android:tag="6"
+            android:text="Căn" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/MyConculator2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_5"
+            android:onClick="onActionClick"
+            android:tag="4"
+            android:text="/" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
-            android:text="7"
-            android:onClick="onNumberClick"
-            android:background="@drawable/selector_button_4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/button8"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="8"
-            android:onClick="onNumberClick"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="7" />
+
+        <Button
             android:id="@+id/button7"
-            android:background="@drawable/selector_button_4"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="9"
-            android:background="@drawable/selector_button_4"
-            android:onClick="onNumberClick"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/button6"
             android:layout_weight="1"
-            style="@style/MyConculator" />
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="8" />
 
         <Button
-            android:text="x"
+            android:id="@+id/button6"
+            style="@style/MyConculator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/MyConculator2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_5"
             android:onClick="onActionClick"
             android:tag="3"
-            android:background="@drawable/selector_button_5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/button5"
-            android:layout_weight="1"
-            style="@style/MyConculator2" />
+            android:text="x" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
-            android:text="4"
-            android:onClick="onNumberClick"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/button12"
-            android:background="@drawable/selector_button_4"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="5"
-            android:background="@drawable/selector_button_4"
-            android:onClick="onNumberClick"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="4" />
+
+        <Button
             android:id="@+id/button11"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="6"
-            android:onClick="onNumberClick"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/button10"
+            android:layout_weight="1"
             android:background="@drawable/selector_button_4"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
+            android:onClick="onNumberClick"
+            android:text="5" />
 
         <Button
-            android:text="-"
+            android:id="@+id/button10"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="6" />
+
+        <Button
             android:id="@+id/button9"
+            style="@style/MyConculator2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/selector_button_5"
             android:onClick="onActionClick"
             android:tag="2"
-            android:layout_weight="1"
-            style="@style/MyConculator2" />
+            android:text="-" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
-            android:text="1"
-
-            android:onClick="onNumberClick"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/button17"
-            android:background="@drawable/selector_button_4"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
 
-        <Button
-            android:text="2"
-            android:background="@drawable/selector_button_4"
-            android:onClick="onNumberClick"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="1" />
+
+        <Button
             android:id="@+id/button15"
+            style="@style/MyConculator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="3"
             android:background="@drawable/selector_button_4"
             android:onClick="onNumberClick"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/button14"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
+            android:text="2" />
 
         <Button
-            android:text="+"
+            android:id="@+id/button14"
+            style="@style/MyConculator"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/button13"
-            android:onClick="onActionClick"
-            android:background="@drawable/selector_button_5"
-            android:tag="1"
             android:layout_weight="1"
-            style="@style/MyConculator2" />
+            android:background="@drawable/selector_button_4"
+            android:onClick="onNumberClick"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/button13"
+            style="@style/MyConculator2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_5"
+            android:onClick="onActionClick"
+            android:tag="1"
+            android:text="+" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:weightSum="4"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
 
         <Button
-            android:text="0"
-            android:background="@drawable/selector_button_4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:id="@+id/button20"
-            android:layout_weight="2"
-            style="@style/MyConculator" />
-
-        <Button
-            android:text="."
-            android:background="@drawable/selector_button_4"
+            style="@style/MyConculator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/button19"
-            android:layout_weight="1"
-            style="@style/MyConculator" />
+            android:layout_weight="2"
+            android:background="@drawable/selector_button_4"
+            android:text="0" />
 
         <Button
-            android:text="="
+            android:id="@+id/button19"
+            style="@style/MyConculator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_4"
+            android:text="." />
+
+        <Button
+            android:id="@+id/button18"
+            style="@style/MyConculator2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_5"
             android:onClick="onActionClick"
             android:tag="5"
-            android:layout_width="0dp"
-            android:background="@drawable/selector_button_5"
-            android:layout_height="match_parent"
-            android:id="@+id/button18"
-            android:layout_weight="1"
-            style="@style/MyConculator2" />
+            android:text="=" />
     </LinearLayout>
 
 </LinearLayout>
